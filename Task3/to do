@@ -1,0 +1,16 @@
+0 1 2 3
+      3 4 5 6
+            6 7 8 9
+                  9 ....
+
+1. Variable für "tree_counter" um die #'s zu zählen
+   Variable für "horizontal_index", um das aktuelle Index ins Array zu tracken
+2. Durch jede Zeile des "forest" (puzzle input) iterieren
+3. Jede Zeile in ein Array von "chars" (class: string) umwandeln
+4. Über die "chars" iterieren (WIE?)
+5. Bis zu 3 chars zählen 
+6. Aktuellen Indexwert zu "horizontal_index" hinzufügen
+7. Aktuelles Array verlassen, wenn drei Strings geprüft sind, zum nächsten Array wechseln
+8. Nächstes Array am Indexwert des "horizontal_index" beginnen
+9. Innerhalb von all dem: 1 zu "tree_counter" addieren, wenn char == "#"
+10. Ganz am Ende: return "tree_counter"

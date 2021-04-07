@@ -1,0 +1,1 @@
+p File.read('passport_data').split("\n\n").count{p { |p| p.gsub(/cid:[^\s]*/,'').count(':')==7}

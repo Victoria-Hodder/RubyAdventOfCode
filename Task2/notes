@@ -1,0 +1,6 @@
+  # letter_eql_position1 = (letter.eql? given_password[position1])
+  # letter_eql_position2 = (letter.eql? given_password[position2])
+
+  # # !!letter_eql_position1 ^ !!letter_eql_position2
+
+  # (letter_eql_position1 and (not letter_eql_position2)) or ((not letter_eql_position1) and letter_eql_position2)

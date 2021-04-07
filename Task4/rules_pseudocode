@@ -1,0 +1,16 @@
+passport == valid if:
+  key == "byr" && (value.to_i >= 1920) && (value.to_i <= 2002)) && (
+  key == "iyr" && value.length == 4 && (value.to_i >= 2010) && (value.to_i <= 2020))
+  key == "eyr" && value.length == 4 && (value.to_i >= 2020) && (value.to_i <= 2030))
+  key == "hgt" && ((value.to_i[0..2] >= 150) && (value.to_i[0..2] <= 193)) && ((value[3,4] == "cm") || (value[3,4] == "in"))
+  key == "hcl" && value[0] == "#" && (value[1..5] == "a".."z" || 0..9) 
+  key == "ecl" && ((value == "amb") || (value == "blu") || (value == "gry") || (value == "grn") || (value_in_ecl == "hzl") || (value_in_ecl == "oth"))
+  key == "pid" && value.length == 9 && value == 0..9
+
+For ranges (e.g. "a".."z", 0..9), use regex?
+    
+Does this ensure it is checking the key against the value that belongs to the key?
+
+How would be the best way to check all validity checks (without doubling up on the count)?
+The passport is only valid if all of these fields (keys) are present 
+AND the data within that field (values) is true
